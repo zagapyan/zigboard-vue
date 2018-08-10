@@ -1,5 +1,8 @@
 # zigboard
 
+# Project Defaults: 
+This application uses `vue-cli`. For all documentation refer to it.
+
 ## Project setup
 ```
 yarn install
