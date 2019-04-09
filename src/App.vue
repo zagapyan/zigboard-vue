@@ -23,7 +23,7 @@ export default {
 html{
   padding: 0;
   margin: 0;
-  background: linear-gradient(45deg, #d26ac2, #46c9e5);
+  background: #46c9e5;
 }
 body{
   margin: 0;
@@ -34,8 +34,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #000;
-  background: #000;
+  background: #ffffff;
   margin: 5px;
   padding: 20px;
   border-radius: 4px;

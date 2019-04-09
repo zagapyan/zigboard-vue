@@ -44,7 +44,7 @@ h1{
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  color: #fff;
+  color: #333333;
   font-size: 4rem;
 }
 @media(max-width: 980px){
@@ -84,28 +84,51 @@ ul.sound-bytes {
   }
 }
 li {
-  display: inline-block;
+  display: flex;
   box-sizing: border-box;
-  border: 1px solid #000;
   width: 100%;
   border-radius: 2px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background: linear-gradient(45deg, #d26ac2, #46c9e5);
   color: #1d2029;
   font-weight: 800;
   text-align: center;
 }
 a {
-  box-sizing: border-box;
-  color: #000;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
   cursor: pointer;
+  padding: 25px 80px;
   width: 100%;
-  height: 100%;
-  display: inline-flex;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  background: #cb4e4e;
+  color: #fff;
+  box-shadow: 0 6px #ab3c3c;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  border-radius: 5px;
+  display: flex;
   text-align: center;
-  padding: 60px 20px;
-  font-size: 1rem;
   justify-content: center;
+  align-items: center;
+}
+a:hover{
+  box-shadow: 0 8px #ab3c3c;
+  top: -2px;
+}
+a:active{
+  box-shadow: 0 0 #ab3c3c;
+  top: 6px;
 }
 </style>
