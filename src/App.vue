@@ -35,8 +35,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background: #ffffff;
-  margin: 5px;
+  margin: 8px;
   padding: 20px;
   border-radius: 4px;
+  box-shadow: 0 4px rgba(0,0,0,.10);
 }
 </style>
