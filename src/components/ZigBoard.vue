@@ -1,6 +1,7 @@
 <template>
   <div class="ZigBoard">
-    <h1 ref="title">{{ title }}<img :src="logo" /></h1>
+    <h1 ref="title">{{title}}<img :src="logo"/></h1>
+    <h2 ref="subtitle">{{subtitle}}</h2>
     <ul class="sound-bytes">
       <li v-for="(sound, index) in sounds" :key="index">
         <a v-on:click="playSounds(sound.file)">{{ sound.name }}</a>
@@ -12,31 +13,33 @@
 <script>
 export default {
   name: "ZigBoard",
-  props: ["title", "sounds"],
+  props: ["title","subtitle", "sounds"],
   data: () => ({
     logo: require("../assets/logo.png"),
-    rotateActive: false,
+    rotateActive: false
   }),
   methods: {
-    playSounds: (fileName) => {
+    playSounds: fileName => {
       const soundFile = require(`../assets/audio/${fileName}.mp3`);
       if (soundFile) {
         const audio = new Audio(soundFile);
         audio.play();
       }
     },
-    rotate: () => {},
-  },
+    rotate: ()=>{
+      
+    }
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.ZigBoard {
+.ZigBoard{
   max-width: 980px;
   margin: 0 auto;
 }
-h1 {
+h1{
   margin: 0;
   display: flex;
   justify-content: center;
@@ -45,24 +48,27 @@ h1 {
   color: #333333;
   font-size: 4rem;
 }
-@media (max-width: 980px) {
-  h1 {
-    font-size: 3rem;
+@media(max-width: 980px){
+  h1{
+    font-size: 3rem
   }
 }
-@media (max-width: 400px) {
-  h1 {
-    font-size: 2rem;
+@media(max-width: 400px){
+  h1{
+    font-size: 2rem
   }
 }
-h1 img {
+h1 img{
   max-height: 80px;
   margin-left: 40px;
   width: auto;
-  transition: 0.5s transform ease-in-out;
+  transition: .5s transform ease-in-out;
 }
-h1 img:hover {
+h1 img:hover{
   transform: rotate(360deg);
+}
+h2{
+  margin: 0;
 }
 ul.sound-bytes {
   list-style-type: none;
@@ -71,12 +77,12 @@ ul.sound-bytes {
   grid-gap: 20px 20px;
   grid-template-columns: repeat(4, 1fr);
 }
-@media (max-width: 980px) {
+@media(max-width: 980px){
   ul.sound-bytes {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 768px) {
+@media(max-width: 768px){
   ul.sound-bytes {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -121,11 +127,11 @@ a {
   justify-content: center;
   align-items: center;
 }
-a:hover {
+a:hover{
   box-shadow: 0 8px #ab3c3c;
   top: -2px;
 }
-a:active {
+a:active{
   box-shadow: 0 0 #ab3c3c;
   top: 6px;
 }
